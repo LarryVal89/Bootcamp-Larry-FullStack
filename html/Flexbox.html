@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modelo flex</title>
+<style>
+
+.container {
+    display: flex;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 10px;
+}
+
+.ejemplo1 {
+    justify-content: space-between;
+}
+
+.item{
+background-color: brown;
+padding: 20px;;
+margin: 5%;
+border: 1px solid yellow;
+color: white;
+text-align: center;
+height: 100px;
+
+}
+
+.item2{
+background-color: brown;
+padding:10px;
+margin: 10px;
+border: 1px solid yellow;
+color: white;
+text-align: center;
+height: 150px;
+
+}
+
+#caja1 {
+    width: 200px;
+    height: 200px;
+}
+
+#caja2 {
+    width: 100px;
+    height: 100px;
+}
+
+#caja3 {
+    width: 400px;
+    height: 300px;
+}
+
+.ejemplo2{
+    justify-content: center;
+    align-items:center;
+    height: auto;
+}
+.ejemplo3{
+    flex-direction:column;
+
+}
+
+.item4{
+background-color: #9196e5;
+padding:10px;
+margin: 10px;
+border: 3px solid rgb(40, 10, 123);
+color: white;
+text-align: center;
+height: 350px;
+width: 350px;
+
+}
+
+.ejemplo4{
+    flex-wrap: wrap;
+}
+
+.ejemplo5 div:nth-child(1){
+    flex-grow: 1;
+}
+
+.ejemplo5 div:nth-child(2){
+    flex-grow: 2;
+}
+
+.ejemplo5 div:nth-child(3){
+    flex-grow: ;
+}
+
+.ejemplo5 div:nth-child(4){
+    flex-grow: 2;
+}
+
+
+</style>
+
+
+</head>
+<body>
+    <h1>EJEMPLOS FLEX</h1>
+ <div class="container ejemplo1">
+    <div class="item" id="caja1">Item 1</div>
+    <div class="item" id="caja2">Item 2</div>
+    <div class="item" id="caja3">Item 3</div>
+    <div class="item" id="caja4">Item 4</div>
+</div> 
+
+<h1>Ejemplo 2 Centrar caja</h1>
+<div class="container ejemplo2">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+
+</div>
+
+
+<h1>Ejercicio 3 aplica dirección a las columnas</h1>
+<div class="container ejemplo3">
+    <div class="item">arriba</div>
+    <div class="item">medio</div>
+    <div class="item">abajo</div>
+
+</div>
+
+<h1>Ejercicio 4 si no caben las cajas en el contenedor< las pasa a la siguiente linea/h1>
+<div class="container ejemplo4">
+    <div class="item4">Item 1</div>
+    <div class="item4">Item 2</div>
+    <div class="item4">Item 3</div>
+    <div class="item4">Item 4</div>
+    <div class="item4">Item 5</div>
+    <div class="item4">Item 6</div>
+</div>
+
+<h1>ejemplo 5 Dimensiones equitativas</h1>
+<div class="container ejemplo5">
+    <div class="item">1X</div>
+    <div class="item">2X</div>
+    <div class="item">3X</div>
+    <div class="item">4X</div>
+</div> 
+
+</body>
+
+</html>

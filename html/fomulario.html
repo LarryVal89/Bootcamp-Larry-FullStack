@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Completo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Formulario de Contacto</h2>
+    
+    <form action="#" method="POST">
+        <!-- Campo de texto básico -->
+        <div class="form-group">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="50">
+        </div>
+
+        <!-- Campo de email -->
+        <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- Campo de teléfono -->
+        <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}">
+        </div>
+
+        <!-- Selector de fecha -->
+        <div class="form-group">
+            <label for="fecha">Fecha de nacimiento:</label>
+            <input type="date" id="fecha" name="fecha">
+        </div>
+
+        <!-- Grupo de radio buttons -->
+        <div class="form-group">
+            <label>Género:</label>
+            <label>
+                <input type="radio" name="genero" value="masculino"> Masculino
+            </label>
+            <label>
+                <input type="radio" name="genero" value="femenino"> Femenino
+            </label>
+            <label>
+                <input type="radio" name="genero" value="otro"> Otro
+            </label>
+        </div>
+
+        <!-- Lista desplegable -->
+        <div class="form-group">
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+                <option value="">Seleccione un país</option>
+                <option value="mx">México</option>
+                <option value="es">España</option>
+                <option value="ar">Argentina</option>
+                <option value="co">Colombia</option>
+            </select>
+        </div>
+
+        <!-- Checkbox múltiple -->
+        <div class="form-group">
+            <label>Intereses:</label>
+            <label>
+                <input type="checkbox" name="intereses[]" value="tecnologia"> Tecnología
+            </label>
+            <label>
+                <input type="checkbox" name="intereses[]" value="deportes"> Deportes
+            </label>
+            <label>
+                <input type="checkbox" name="intereses[]" value="musica"> Música
+            </label>
+        </div>
+
+        <!-- Área de texto -->
+        <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" maxlength="500"></textarea>
+        </div>
+
+        <!-- Subida de archivo -->
+        <div class="form-group">
+            <label for="archivo">Subir archivo:</label>
+            <input type="file" id="archivo" name="archivo">
+        </div>
+
+        <!-- Rango -->
+        <div class="form-group">
+            <label for="satisfaccion">Nivel de satisfacción:</label>
+            <input type="range" id="satisfaccion" name="satisfaccion" min="1" max="10">
+        </div>
+
+        <!-- Botones -->
+        <div class="form-group">
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpiar</button>
+        </div>
+    </form>
+</body>
+</html>

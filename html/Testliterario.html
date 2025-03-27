@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="img/" alt="">
+    <h2>Test Literario</h2>
+    <Form>
+        <label id="genero">Escriba su genero favortio</label>
+        <input type="text" name="genero" id="generoIn">
+        <br>
+        <br>
+        <label id="autor">Escriba su autor favortio</label>
+        <select id="autorSelect">
+        <option value="ggm">Gabriel garcia marquez</option>
+        <option value="acd">Arturo Coman</option>
+        <option value="at">Akira Tori</option>
+        </select>
+        <br>
+        <br>
+        <textarea id="obraRes" cols="50" rows="15" maxlength="1000" placeholder="Escriba el resumen de la obra"></textarea>
+        <br>
+        <input type="text" name="" id="">
+        <br>
+        <label type="date" id="fechaActual"></label>
+        <br>
+        <br>
+        <label id="genero">Escriba su vehiculo favorito</label>
+        <input type="checkbox" id="vehiculo1" name="vehiculo1" value="Bici">
+        <label for="vehiculo1"> Bicicleta</label><br>
+        <input type="checkbox" id="vehiculo2" name="vehiculo2" value="Carro">
+        <label for="vehiculo2"> Carro</label><br>
+        <input type="checkbox" id="vehiculo3" name="vehiculo3" value="Moto">
+        <label for="vehiculo3"> Moto</label>   
+        <br>
+        <br>   
+        <input type="button" id="btnAceptar" value="ingresar" onclick="Mostrar">
+        <br>
+        <label id="respuesta"></label>
+    </Form>
+    <script>
+        function Mostrar(){
+            document.getElementById("respuesta").innerText = "un genero"
+        }
+
+
+    </script>
+</body>
+</html>

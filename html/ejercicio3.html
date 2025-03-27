@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenedores</title>
+    <style>
+
+.contenedor {
+    display: flex;
+    margin: 10px;
+    border: 1px solid black;
+    justify-content: space-evenly;
+}
+.padre{
+    justify-content: space-between;
+}
+
+.madre {
+    background-color: blue;
+    margin: 5px;
+    padding: 10px;
+    color: aqua;
+    text-align: center;
+    line-height: 150px;
+    width: 240px;
+    height: auto;
+
+}
+.familia {
+    flex-direction: column;
+}
+.hijo {
+
+    margin: 5px;
+    padding: 10px;
+    background-color: beige;
+    text-align: center;
+    line-height: 150px;
+    width: 240px;
+    height: 100px;
+}
+.Hermanos {
+    flex-wrap: wrap;
+}
+
+.HermanoMayor {
+    background-color: #9196e5;
+    padding:10px;
+    margin: 5px;
+    border: 3px solid rgb(40, 10, 123);
+    color: white;
+    text-align: center;
+    line-height: 150px;
+    height: auto;
+    width: 150px;
+}
+
+.tio{
+    flex-direction: column;
+
+}
+.tios {
+    
+    margin: 5px auto;
+    padding: 10px;
+    background-color: brown;
+    width: 240px;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+}
+
+.abu {
+    background-color: rgb(79, 222, 43);
+    margin: 5px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+
+}
+.abuelo{
+    flex-direction: colum
+}
+.abuelo div:nth-child(1) {
+    flex-grow: 1;
+}
+.abuelo div:nth-child(2) {
+    flex-grow: 3;
+}
+.abuelo div:nth-child(3) {
+    flex-grow: 1;
+}
+.abuelo div:nth-child(4) {
+    flex-grow: 2;
+}
+.abuelo div:nth-child(5) {
+    flex-grow: 1;
+}
+
+    </style>
+</head>
+<body>
+    <div class="contenedor padre">
+<div class="contenedor madre">madre</div>
+<div class="contenedor familia">
+    <div class="hijo">mayor</div>
+    <div class="hijo">mediano</div>
+    <div class="hijo">pequeño</div>
+</div>
+
+<div class="contenedor Hermanos">
+    <div class="HermanoMayor">hermano mayor</div>
+    <div class="HermanoMayor">hermano mayor</div>
+    <div class="HermanoMayor">hermano mayor</div>
+    <div class="HermanoMayor">hermano mayor</div>
+    <div class="HermanoMayor">hermano mayor</div>
+    <div class="HermanoMayor">hermano mayor</div>
+</div>
+
+<div class="contenedor tio">
+    <div class="tios">Tios</div>
+    <div class="tios">Tios</div>
+</div>
+<div class="contenedor abuelo">
+    <div class="abu">1X</div>
+    <div class="abu">2X</div>
+    <div class="abu">3X</div>
+    <div class="abu">4X</div>
+    <div class="abu">5X</div>
+
+</div>
+
+    </div>
+
+</body>
+</html>

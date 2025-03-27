@@ -1,0 +1,231 @@
+/*definir selectores con punto y clase
+    selector universal sirve para hacer formateo de listas , se define con un asterisco
+    permiter formatear asterisco*/
+    *
+    {
+        margin: 0;
+        padding: 0;
+        list-style: none;/*para quedar los punto dentro de las listas*/
+    }
+        header {
+            position: relative;
+            width: 1000px;
+            height: 120px;
+            margin-top: 40px;
+            margin-bottom: 0px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        #logo {
+
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 200px;
+            height: 60px;
+            background-color: brown;
+            text-align: center;
+            font-size: 40px;
+            color: aliceblue;
+            line-height: 60px;
+        }
+        #icono1 {
+            top: 15px;
+            right: 120px;
+
+        }
+
+        #icono2 {
+            bottom: 15px;
+            right: 120px;
+
+        }
+
+        #icono3 {
+            top: 15px;
+            right: 70px;
+
+        }
+
+        #icono4 {
+            bottom: 15px;
+            right: 70px;
+
+        }
+
+        #icono5 {
+            top: 15px;
+            right: 20px;
+
+        }
+
+        #icono6 {
+            bottom: 15px;
+            right: 20px;
+
+        }
+
+        .redes {
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        
+        
+        } 
+
+        .redes img{
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        
+        } 
+
+    nav {
+        position: relative;
+        width: 1000px;
+        height: 48px;
+        margin: auto;
+        background-color: rgb(127, 127, 127);
+
+    }
+.botones {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    float: left;
+    width: 196px;
+    height: 48px;
+    background-color: rgb(0, 0, 0);
+    margin: 0px 2px;
+    text-align: center;
+    line-height: 48px;
+    color: rgb(255, 255, 255);
+}
+a .botones:hover {
+
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s ease-in-out;
+    }
+a .botones:active {
+
+    background-color: rgb(217, 0, 0);
+
+
+}
+
+#top {
+
+    position: relative;
+    margin: 10px auto;
+    width: 1000px;
+    height: 192px;
+
+}
+
+#top ul {
+    width: 1010px;
+    height: 192px;
+
+}
+
+#top ul li {
+    
+    float: left;
+    width: 310px;
+    height: 192px;
+    margin: auto;
+    margin-bottom: 25px;
+    text-align: center;
+
+}
+
+#top ul li img {
+    border-radius: 100px;
+    height: 100px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#top ul li h1 {
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+
+}
+
+section {
+
+    position: relative;
+    margin: auto;
+    top: 50px;
+    bottom: 30px;
+    width: 1000px;
+    height: 400px;
+    background-color: aqua;
+
+
+}
+
+aside#izq {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 400px;
+    background-color: rgb(251, 255, 0);
+
+
+}
+aside#izq1 {
+    position: absolute;
+    left: 0;
+    top: 200px;
+    width: 200px;
+    height: 200px;
+    background-color: #fdff8d;
+
+
+}
+
+article {
+    position: absolute;
+    left: 200px;
+    top: 0;
+    width: 600px;
+    height: 400px;
+    background-color: rgb(28, 11, 105);
+
+}
+
+aside#der {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 400px;
+    background-color: rgb(230, 0, 0);
+
+}
+
+aside#der1 {
+
+    position: absolute;
+    right: 0;
+    top: 200px;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(82, 59, 59);
+
+}
+
+footer {
+    position: relative;
+    margin: 10px auto;
+    width: 1000px;
+    height: 60px;
+    background-color: rgb(104, 104, 104);
+
+
+
+}

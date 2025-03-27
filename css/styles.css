@@ -1,0 +1,32 @@
+.menu_list {
+    display: flex;
+    flex-direction: row;
+    margin: 3%;
+    padding: auto;
+    
+}
+
+
+.menu_list li {
+    margin-right: 10px;-
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.menu_list li:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.menu_list li.active {
+    background-color: #008CBA;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .menu_list li {
+        flex-basis: 100%;
+    }
+}
