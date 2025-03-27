@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 1: Determinar si una persona puede votar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+        }
+        input, button {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Determinar si puedes votar</h2>
+        <input type="number" id="edad" placeholder="Ingresa tu edad">
+        <button onclick="puedeVotar()">Verificar</button>
+        <p id="resultadoVoto"></p>
+    </div>
+
+    <script>
+        function puedeVotar() {
+            let edad = parseInt(document.getElementById("edad").value);
+            let resultado = edad >= 18 ? "Puedes votar." : "No puedes votar.";
+            document.getElementById("resultadoVoto").innerText = resultado;
+        }
+    </script>
+</body>
+</html>

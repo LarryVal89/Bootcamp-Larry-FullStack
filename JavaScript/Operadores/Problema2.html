@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 2: Evaluar si un número es divisible por 3 y 5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+        }
+        input, button {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Evaluar si un número es divisible por 3 y 5</h2>
+        <input type="number" id="numero" placeholder="Ingresa un número">
+        <button onclick="esDivisible()">Verificar</button>
+        <p id="resultadoDivisible"></p>
+    </div>
+
+    <script>
+        function esDivisible() {
+            let numero = parseInt(document.getElementById("numero").value);
+            let resultado = (numero % 3 === 0 && numero % 5 === 0) ? "Es divisible por 3 y 5" : "No es divisible por 3 y 5";
+            document.getElementById("resultadoDivisible").innerText = resultado;
+        }
+    </script>
+</body>
+</html>

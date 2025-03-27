@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 3: Calcular el IMC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+        }
+        input, button {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Calcular el Índice de Masa Corporal (IMC)</h2>
+        <input type="number" id="peso" placeholder="Ingresa tu peso en kg">
+        <input type="number" id="altura" placeholder="Ingresa tu altura en metros" step="0.01">
+        <button onclick="calcularIMC()">Calcular IMC</button>
+        <p id="resultadoIMC"></p>
+    </div>
+
+    <script>
+        function calcularIMC() {
+            let peso = parseFloat(document.getElementById("peso").value);
+            let altura = parseFloat(document.getElementById("altura").value);
+            if (peso > 0 && altura > 0) {
+                let imc = peso / (altura * altura);
+                let categoria = "";
+                if (imc < 18.5) categoria = "Bajo peso";
+                else if (imc < 24.9) categoria = "Peso normal";
+                else if (imc < 29.9) categoria = "Sobrepeso";
+                else categoria = "Obesidad";
+                document.getElementById("resultadoIMC").innerText = `Tu IMC es ${imc.toFixed(2)} - ${categoria}`;
+            } else {
+                document.getElementById("resultadoIMC").innerText = "Por favor ingresa valores válidos";
+            }
+        }
+    </script>
+</body>
+</html>

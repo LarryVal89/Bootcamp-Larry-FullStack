@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 6: Calcular el área de figuras geométricas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+        }
+        select, input, button {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Calcular el área de figuras geométricas</h2>
+        <label for="figura">Selecciona una figura:</label>
+        <select id="figura" onchange="mostrarCampos()">
+            <option value="cuadrado">Cuadrado</option>
+            <option value="rectangulo">Rectángulo</option>
+            <option value="triangulo">Triángulo</option>
+        </select>
+        
+        <input type="number" id="lado1" placeholder="Lado / Base" style="display: none;">
+        <input type="number" id="lado2" placeholder="Altura" style="display: none;">
+        
+        <button onclick="calcularArea()">Calcular Área</button>
+        <p id="resultadoArea"></p>
+    </div>
+
+    <script>
+        function mostrarCampos() {
+            let figura = document.getElementById("figura").value;
+            document.getElementById("lado1").style.display = "block";
+            document.getElementById("lado2").style.display = (figura === "cuadrado") ? "none" : "block";
+        }
+
+        function calcularArea() {
+            let figura = document.getElementById("figura").value;
+            let lado1 = parseFloat(document.getElementById("lado1").value);
+            let lado2 = parseFloat(document.getElementById("lado2").value);
+            let area = 0;
+
+            switch (figura) {
+                case "cuadrado":
+                    area = lado1 * lado1;
+                    break;
+                case "rectangulo":
+                    area = lado1 * lado2;
+                    break;
+                case "triangulo":
+                    area = (lado1 * lado2) / 2;
+                    break;
+                default:
+                    area = "Figura no válida";
+            }
+
+            document.getElementById("resultadoArea").innerText = `El área es: ${area}`;
+        }
+    </script>
+</body>
+</html>

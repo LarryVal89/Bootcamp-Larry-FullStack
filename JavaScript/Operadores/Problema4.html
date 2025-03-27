@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 4: Identificar el día de la semana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+        }
+        input, button {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Identificar el día de la semana</h2>
+        <input type="number" id="numeroDia" placeholder="Ingresa un número del 1 al 7">
+        <button onclick="identificarDia()">Verificar</button>
+        <p id="resultadoDia"></p>
+    </div>
+
+    <script>
+        function identificarDia() {
+            let numero = parseInt(document.getElementById("numeroDia").value);
+            let dias = ["", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+            let resultado = (numero >= 1 && numero <= 7) ? `El día correspondiente es: ${dias[numero]}` : "Número inválido. Ingresa un número del 1 al 7.";
+            document.getElementById("resultadoDia").innerText = resultado;
+        }
+    </script>
+</body>
+</html>
